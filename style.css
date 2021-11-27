@@ -466,9 +466,35 @@ section.skills .title::before{
     width: 35px;
     border-radius: 14px;
 }
+
 .owl-dot.active,
 .owl-dot:hover{
     background: crimson!important;
+}
+
+.teams .blog-item-inner .blog-info{
+    margin-top: 15px;
+}
+
+.teams .blog-item-inner .blog-info .blog-title{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.teams .blog-item-inner .blog-info .blog-note{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 10px;
+    font-style: italic;
+    color: #51a9f5;
+    font-size: 13px;
+}
+
+.teams .blog-item-inner .blog-info .blog-description{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 /* contact section styling */
@@ -724,7 +750,7 @@ ion-icon {
 
 ion-icon.github-ionicon {
     font-size: 50px;
-    color: blue;
+    color: #51a9f5;
     width: 100%;
 }
 
@@ -992,6 +1018,7 @@ section.blog .title::after {
    height: 100%;
    font-size: 20px;
    font-weight: bolder;
+   color: #51a9f5;
 }
 
 /* social media link */
