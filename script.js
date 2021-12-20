@@ -70,4 +70,73 @@ $(document).ready(function(){
             }
         }
     });
+
+         /* light box */
+        const portfolioItems = $('.teams').find(".owl-item"),
+        totalPortfolioItems = portfolioItems.length,
+        lightboxClose = document.querySelector(".lightbox-close");
+
+        // Lightbox
+        const lightbox = document.querySelector(".lightbox"),
+            lightboxImage = lightbox.querySelector(".lightbox-img"),
+            lightboxText = lightbox.querySelector(".caption-text"),
+            lightboxCounter = lightbox.querySelector(".caption-counter");
+
+        let itemIndex = 0;
+
+        function toggleLightBox() {
+            lightbox.classList.toggle("open");
+        }
+
+        function changeItem() {
+            imageSource = portfolioItems[itemIndex].querySelector(".blog-img img").getAttribute("src");
+            lightboxImage.src = imageSource;
+            lightboxText.innerHTML = portfolioItems[itemIndex].querySelector("h4").innerHTML;
+            lightboxCounter.innerHTML = (itemIndex+1)+" of "+totalPortfolioItems;
+        }
+
+        function prevItem() {
+            if ( itemIndex == 0) {
+                itemIndex = totalPortfolioItems-1;
+            } else {
+                itemIndex--;
+            }
+            changeItem();
+        }
+
+        function nextItem() {
+            if ( itemIndex == totalPortfolioItems-1 ) {
+                itemIndex = 0;
+            } else {
+                itemIndex++;
+            }
+            changeItem();
+        }
+
+        for (let i=0; i<totalPortfolioItems; i++) {
+            portfolioItems[i].addEventListener("click", function() {
+                itemIndex = i;
+                changeItem();
+                toggleLightBox();
+            })
+        }
+        
+        // Close Lightbox
+        lightbox.addEventListener("click", function(event) {
+            if (event.target === lightboxClose || event.target === lightbox) {
+                toggleLightBox();
+            }
+        });
+
+        document.querySelector(".prev-item").addEventListener("click", function(event) {
+            prevItem();
+        });
+
+        document.querySelector(".next-item").addEventListener("click", function(event) {
+            nextItem();
+        });
+
+        document.querySelector(".lightbox-img").addEventListener("click", function(event) {
+            nextItem();
+        });
 });
