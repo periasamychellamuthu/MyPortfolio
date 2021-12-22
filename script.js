@@ -51,7 +51,7 @@ $(document).ready(function(){
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
-        loop: true,
+        loop:false,     //true
         autoplay: true,
         autoplayTimeOut: 2000,
         autoplayHoverPause: true,
@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
 
          /* light box */
-        const portfolioItems = $('.teams').find(".owl-item"),
+        const portfolioItems = $(".owl-item"),   //$('.teams').find(".owl-item")
         totalPortfolioItems = portfolioItems.length,
         lightboxClose = document.querySelector(".lightbox-close");
 

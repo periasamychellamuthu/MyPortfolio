@@ -11,6 +11,11 @@ html{
     scroll-behavior: smooth;
 }
 
+/*crimson color class*/
+.col-crimson{
+    color: crimson;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -979,7 +984,7 @@ svg.radial-progress text {
     color: #ffffff;
     font-weight: 600;
     font-size: 14px;
-    left: 15px;
+    right: 15px;
     bottom: 15px;
 }
 
@@ -1045,7 +1050,7 @@ section.blog .title::after {
     margin-right: 30px;
 }
 
-.home .home-content .social-link a ion-icon{
+.home .home-content .social-link a i{
     font-size: 40px;
 }
 
