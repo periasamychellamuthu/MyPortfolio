@@ -232,7 +232,7 @@ section .title::after{
 .about .about-content .left img{
     height: 400px;
     width: 400px;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 6px;
 }
 .about .about-content .right{
@@ -758,18 +758,28 @@ footer span a:hover{
     }
 }
 
-/* ionicons CSS*/
-ion-icon {
+/* icons CSS*/
+.ion-icon {
     font-size: 20px;
     color: crimson;
     margin-right: 5px;
 }
 
-ion-icon.github-ionicon {
-    font-size: 50px;
+i.github-icon {
+    font-size: 45px;
     color: #51a9f5;
     width: 100%;
 }
+
+.calendar-mar{
+    margin-right: 5px;
+}
+
+.expand-arrow{
+    font-size: 32px;
+    line-height: 40px;
+}
+
 
 /* experience-card */
 .services .serv-content .experience-card,.services .serv-content .education-card {
